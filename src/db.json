@@ -1,0 +1,11 @@
+{"udata" : [
+    {"name":"aniket","age":15,"status":"active"},
+    {"name":"sam","age":53,"status":"active"},
+    {"name":"kopi","age":12,"status":"inactive"},
+    {"name":"raj","age":15,"status":"active"},
+    {"name":"lavuuu","age":22,"status":"inactive"},
+    {"name":"suaji","age":5,"status":"active"},
+    {"name":"kauuu","age":24,"status":"inactive"},
+    {"name":"pauuu","age":42,"status":"inactive"}
+  ]
+}
