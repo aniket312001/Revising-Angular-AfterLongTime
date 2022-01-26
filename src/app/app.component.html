@@ -1,0 +1,28 @@
+
+<app-navbar></app-navbar>
+
+{{name}}
+
+<h1>{{getName()}}</h1>
+
+{{obj.age}}
+
+<h1>
+  {{arr}}
+</h1>
+
+<button (click)="alertMyName()">Click Me</button>
+
+<input type="text" #n1 (keyup)="myEvent(n1.value)">
+
+{{data}}
+<input name="data" type="text" [(ngModel)]="data"> 
+
+<app-userlist></app-userlist>
+
+<app-login></app-login>
+
+<router-outlet></router-outlet>
+
+
+<h1 appCustomStyle> This is Custom Directive</h1>
