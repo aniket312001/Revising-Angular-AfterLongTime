@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'afterlongtime';
+  
+  srcData = localStorage.getItem("img")
+  filesSelected :any | ""
 
   name:String = "Aniket Chavan"
 
@@ -30,6 +33,28 @@ export class AppComponent {
 
   myEvent(ev:any){
     console.log(ev)
+  }
+
+  
+  encodeImageFileAsURL(){   // img converter with  base64
+    
+     this.filesSelected = (<HTMLInputElement>document.getElementById("inputFileToLoad")).files;
+    //  this.filesSelected = document.getElementById("inputFileToLoad").files;
+    console.log(this.filesSelected)
+    if (this.filesSelected.length > 0) {
+        
+        var fileToLoad = this.filesSelected[0];
+        var fileReader = new FileReader();
+
+        fileReader.onload = function(fileLoadedEvent) {
+            
+          console.log(fileLoadedEvent.target?.result)   // <--- data: base64
+          localStorage.setItem("img",String(fileLoadedEvent.target?.result) )
+        }
+
+        fileReader.readAsDataURL(fileToLoad);  // function call
+    }
+
   }
 
 

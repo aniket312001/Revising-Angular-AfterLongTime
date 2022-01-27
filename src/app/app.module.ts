@@ -16,7 +16,7 @@ import { CustomStyleDirective } from './custom-style.directive';
 import { CompanyModule } from './company/company.module';
 import { SaleModule } from './sale/sale.module';
 
-
+import { AngularFileUploaderModule } from "angular-file-uploader";
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,8 @@ import { SaleModule } from './sale/sale.module';
     HttpClientModule,
     UserModule,FormsModule,
     CompanyModule,
-    SaleModule
+    SaleModule,
+    AngularFileUploaderModule,
   ],
 
   providers: [],
